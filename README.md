@@ -21,7 +21,7 @@ Building and tagging the Docker base image
 
 ```bash
 wget -c -t 0  https://s3.amazonaws.com/new-mule-artifacts/mule-ee-distribution-standalone-3.8.3.zip
-docker build --tag="thomas-li/mule-ee" .
+docker build --tag="thomas67/mule-ee" .
 ```
 
 Using the Docker image
@@ -35,7 +35,7 @@ Standalone Mule ESB Enterprise Container
 Start a standalone Mule ESB Enterprise instance
 
 ```bash
-docker run -t -i --name='mule-ee-instance-X' thomas-li/mule-ee
+docker run -t -i --name='mule-ee-instance-X' thomas67/mule-ee
 ```
 
 
@@ -43,7 +43,7 @@ App specific container image
 ---------------
 
 ```bash
-FROM                    thomas-li/mule-ee:latest
+FROM                    thomas67/mule-ee:latest
 .
 .
 ADD                     mule-app/target/mule-app-1.0.0-SNAPSHOT.zip /opt/mule/apps/
