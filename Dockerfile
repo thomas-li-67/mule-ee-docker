@@ -8,8 +8,8 @@ MAINTAINER Thomas Li <thomas_li@aliyun.com>
 WORKDIR /opt
 RUN useradd --user-group --shell /bin/false mule && chown mule /opt 
 USER mule
-ADD ./mule-ee-distribution-standalone-3.8.3.zip /opt
-RUN unzip mule-ee-distribution-standalone-3.8.3.zip \
+RUN wget -c -t 0 https://s3.amazonaws.com/new-mule-artifacts/mule-ee-distribution-standalone-3.8.3.zip \
+      && unzip mule-ee-distribution-standalone-3.8.3.zip \
 	&& ln -s mule-enterprise-standalone-3.8.3 mule && rm mule-ee-distribution-standalone-3.8.3.zip
 
 # ADD ./*.lic /opt/mule-enterprise-standalone-3.8.3/conf 
