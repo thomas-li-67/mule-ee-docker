@@ -20,7 +20,6 @@ Building and tagging the Docker base image
 ---------------
 
 ```bash
-wget -c -t 0  https://s3.amazonaws.com/new-mule-artifacts/mule-ee-distribution-standalone-3.8.3.zip
 docker build --tag="thomas67/mule-ee" .
 ```
 
